@@ -6,7 +6,7 @@ from starkware.cairo.common.cairo_secp.bigint import (
     bigint_mul,
 )
 from starkware.cairo.common.cairo_secp.constants import BASE
-from src.bn254.fq import (
+from src.bandersnatch.fq import (
     is_zero,
     verify_zero5,
     fq_bigint3,
@@ -17,7 +17,7 @@ from src.bn254.fq import (
     assert_reduced_felt,
     bigint_sqr,
 )
-from src.bn254.curve import P0, P1, P2
+from src.bandersnatch.curve import P0, P1, P2
 from starkware.cairo.common.registers import get_fp_and_pc
 
 // Represents a point on the elliptic curve.
@@ -33,6 +33,7 @@ struct G1PointFull {
 }
 
 namespace g1 {
+    // TODO: change this to bandersnatch curve equation
     func assert_on_curve{range_check_ptr}(pt: G1Point*) -> () {
         alloc_locals;
         let (__fp__, _) = get_fp_and_pc();

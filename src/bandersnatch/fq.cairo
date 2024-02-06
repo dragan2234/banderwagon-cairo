@@ -9,7 +9,7 @@ from starkware.cairo.common.cairo_secp.bigint import (
 from starkware.cairo.common.cairo_builtins import BitwiseBuiltin
 from starkware.cairo.common.registers import get_fp_and_pc
 from starkware.cairo.common.math import abs_value
-from src.bn254.curve import P0, P1, P2, N_LIMBS, N_LIMBS_UNREDUCED, DEGREE, BASE
+from src.bandersnatch.curve import P0, P1, P2, N_LIMBS, N_LIMBS_UNREDUCED, DEGREE, BASE
 
 const SHIFT_MIN_BASE = SHIFT - BASE;
 const SHIFT_MIN_P2 = SHIFT - P2 - 1;
@@ -80,7 +80,7 @@ namespace fq_bigint3 {
         let (__fp__, _) = get_fp_and_pc();
 
         %{
-            from src.bn254.hints import p, base as BASE, p_limbs
+            from src.bandersnatch.hints import p, base as BASE, p_limbs
 
             sum_limbs = [getattr(getattr(ids, 'a'), 'd'+str(i)) + getattr(getattr(ids, 'b'), 'd'+str(i)) for i in range(ids.N_LIMBS)]
             sum_unreduced = sum([sum_limbs[i] * BASE**i for i in range(ids.N_LIMBS)])
@@ -174,7 +174,7 @@ namespace fq_bigint3 {
         let (__fp__, _) = get_fp_and_pc();
 
         %{
-            from src.bn254.hints import p, base as BASE, p_limbs
+            from src.bandersnatch.hints import p, base as BASE, p_limbs
 
             sub_limbs = [getattr(getattr(ids, 'a'), 'd'+str(i)) - getattr(getattr(ids, 'b'), 'd'+str(i)) for i in range(ids.N_LIMBS)]
             sub_unreduced = sum([sub_limbs[i] * BASE**i for i in range(ids.N_LIMBS)])
@@ -898,7 +898,7 @@ func reduce_5{range_check_ptr}(val: UnreducedBigInt5) -> BigInt3* {
 
     %{
         from starkware.cairo.common.math_utils import as_int
-        from src.bn254.hints import reduce_hint
+        from src.bandersnatch.hints import reduce_hint
 
         val_limbs = ids.N_LIMBS_UNREDUCED*[0]
 
@@ -1087,7 +1087,7 @@ func reduce_3{range_check_ptr}(val: UnreducedBigInt3) -> BigInt3* {
 
     %{
         from starkware.cairo.common.math_utils import as_int
-        from src.bn254.hints import reduce3_hint
+        from src.bandersnatch.hints import reduce3_hint
 
         val_limbs = ids.N_LIMBS*[0]
 
