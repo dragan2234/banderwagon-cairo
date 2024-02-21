@@ -25,3 +25,20 @@ Explanation of garaga framework: https://docs.google.com/presentation/d/19OYje-g
 Youtube: https://www.youtube.com/watch?v=ttJ2z5KnhFA&t=12s&ab_channel=StarkNetCC
 
 Bandersnatch implementation: https://github.com/asanso/Bandersnatch
+
+## Prerequisites for Cairo0
+- [pipenv](https://pipenv.pypa.io/en/latest/)
+- [protostar](https://docs.swmansion.com/protostar/docs/cairo-1/installation)
+- You will also need gmp for cairo0 to work (for example on mac run `brew install gmp`)
+
+## Setup for Cairo0
+```bash
+$ cd cairo0
+$ make setup
+```
+
+## Testing Cairo 0
+```bash
+$ cd cairo0
+$ make test
+```
