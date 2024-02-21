@@ -1,4 +1,4 @@
-.PHONY: build
+.PHONY: build setup clean test
 
 setup:
 	pipenv install
