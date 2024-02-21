@@ -33,7 +33,9 @@ struct G1PointFull {
 }
 
 namespace g1 {
-    // TODO: change this to bandersnatch curve equation
+    // The curve is given by the equation in short weistrass form:
+    // bandersnatch:
+    //   y^2 = x^3 - 3763200000x - 78675968000000
     func assert_on_curve{range_check_ptr}(pt: G1Point*) -> () {
         alloc_locals;
         let (__fp__, _) = get_fp_and_pc();
@@ -44,7 +46,12 @@ namespace g1 {
         let x_sq = fq_bigint3.mul(pt.x, pt.x);
         let x_cube = fq_bigint3.mul(x_sq, pt.x);
 
-        assert left.d0 = x_cube.d0 + 3;
+        let a = BigInt3(3763200000, 0, 0); // 3763200000
+        let b = BigInt3(78675968000000, 0, 0); // 78675968000000
+
+        let a_x = fq_bigint3.mul(pt.x, a);
+
+        assert left.d0 = x_cube - a_x.d0 - b.d0;
         assert left.d1 = x_cube.d1;
         assert left.d2 = x_cube.d2;
 
