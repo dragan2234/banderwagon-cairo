@@ -1,0 +1,58 @@
+{
+    "attributes": [],
+    "builtins": [],
+    "compiler_version": "0.13.0",
+    "data": [],
+    "debug_info": {
+        "file_contents": {},
+        "instruction_locations": {}
+    },
+    "hints": {},
+    "identifiers": {
+        "__main__.BASE": {
+            "type": "const",
+            "value": 77371252455336267181195264
+        },
+        "__main__.DEGREE": {
+            "type": "const",
+            "value": 2
+        },
+        "__main__.N0": {
+            "type": "const",
+            "value": 30244127868278989773006817
+        },
+        "__main__.N1": {
+            "type": "const",
+            "value": 29052176285386346315121104
+        },
+        "__main__.N2": {
+            "type": "const",
+            "value": 2189824323607448610983143
+        },
+        "__main__.N_LIMBS": {
+            "type": "const",
+            "value": 3
+        },
+        "__main__.N_LIMBS_UNREDUCED": {
+            "type": "const",
+            "value": 5
+        },
+        "__main__.P0": {
+            "type": "const",
+            "value": 75387840085786938186924033
+        },
+        "__main__.P1": {
+            "type": "const",
+            "value": 38837452686214984973159423
+        },
+        "__main__.P2": {
+            "type": "const",
+            "value": 8759297294429794443932573
+        }
+    },
+    "main_scope": "__main__",
+    "prime": "0x800000000000011000000000000000000000000000000000000000000000001",
+    "reference_manager": {
+        "references": []
+    }
+}
