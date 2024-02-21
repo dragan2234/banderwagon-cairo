@@ -1,6 +1,8 @@
 # banderwagon-cairo
 Project for OnlyDust contributors - creating banderwagon scalar multiplication and point addition in cairo.
 
+Cairo0:
+
 Idea is to get the ec_add and scalar mul operations from [Garaga] (https://github.com/keep-starknet-strange/garaga/tree/main/src/bn254) bn245 implementations and measure cairo steps for bandersnatch/banderwagon.
 
 This should be done in this order:
@@ -9,6 +11,9 @@ This should be done in this order:
 2. Create banderwagon wrapper for bandersnatch explained here: https://hackmd.io/@6iQDuIePQjyYBqDChYw_jg/BJ2-L6Nzc and https://hackmd.io/@6iQDuIePQjyYBqDChYw_jg/BJBNcv9fq
 3. Benchmark cairo steps for ec_add, scalar_mul and multi_scalar_mul.
 
+
+Cairo1:
+tbd.
 
 
 Bandersnatch curve description: https://eprint.iacr.org/2021/1152.pdf
