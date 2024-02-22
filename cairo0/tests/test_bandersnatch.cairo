@@ -19,3 +19,5 @@ func test_bandersnatch_fail() {
     assert_not_eq(0,1);
     return ();
 }
+
+//todo use ./scripts/bandersnatch_rust/target/release/bandersnatch_rust add 1 2 | sed -n 's/.*(\(.*\)).*/\1/p' to get the result from the rust lib

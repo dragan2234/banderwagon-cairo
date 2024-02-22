@@ -1,0 +1,10 @@
+[package]
+name = "bandersnatch_rust"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ark-ff = "0.4.2"
+ark-std = "0.4.0"
+bandersnatch = "0.1.1"
+lambdaworks-math = "0.5.0"

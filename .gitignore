@@ -1,2 +1,4 @@
 cairo0/build/*
+Cargo.lock
 Pipfile.lock
+target

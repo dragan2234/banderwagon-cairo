@@ -14,4 +14,5 @@ clean:
 
 
 test:
+	cargo build --release --manifest-path=./scripts/bandersnatch_rust/Cargo.toml --quiet
 	protostar test-cairo0
