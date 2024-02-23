@@ -46,12 +46,12 @@ namespace g1 {
         let x_sq = fq_bigint3.mul(pt.x, pt.x);
         let x_cube = fq_bigint3.mul(x_sq, pt.x);
 
-        let a = BigInt3(3763200000, 0, 0); // 3763200000
-        let b = BigInt3(78675968000000, 0, 0); // 78675968000000
+        tempvar a: BigInt3* = new BigInt3(3763200000, 0, 0); // 3763200000
+        let b = 78675968000000;
 
         let a_x = fq_bigint3.mul(pt.x, a);
 
-        assert left.d0 = x_cube - a_x.d0 - b.d0;
+        assert left.d0 = x_cube - a_x - b;
         assert left.d1 = x_cube.d1;
         assert left.d2 = x_cube.d2;
 
