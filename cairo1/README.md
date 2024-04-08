@@ -24,3 +24,6 @@ Affine doubling formulas: 2(x1,y1)=(x3,y3) where
 Scalar multiplication:
 
 Section 6, algorithm 16 and 17: https://eprint.iacr.org/2022/586.pdf
+
+
+Code can be inspired by https://github.com/shramee/cairo_bn/ and adapted to bandersnatch equations.
